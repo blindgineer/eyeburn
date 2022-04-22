@@ -1,0 +1,15 @@
+<span class="spacer-left"></span>
+<main-fogones [fogones]="fogones" (onSelected)="onClick($event)"></main-fogones>
+<span class="spacer-mid"></span>
+<mat-card>
+    <mat-card-title>{{ fogones[selected].name }}</mat-card-title>
+    <button mat-fab (click)="statusValue()" [color]="fogones[selected].status === 1 ? 'success' : 'warn'"
+        [attr.aria-label]="fogones[selected].status === 1 ? 'Fogon '+selected+' Encendido' : 'Fogon '+selected+' Apagado'">
+        <mat-icon>power_settings_new</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+    <main-temporizador [fogones]="fogones" [selected]="selected"></main-temporizador>
+    <mat-divider></mat-divider>
+    <main-temperature-level [fogones]="fogones" [selected]="selected"></main-temperature-level>
+</mat-card>
+<span class="spacer-right"></span>

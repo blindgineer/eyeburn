@@ -1,0 +1,29 @@
+mat-card {
+  text-align: center;
+  width: 270px;
+  height: fit-content;
+  background-color: #ffbd86;
+}
+
+mat-card-title {
+  color: red;
+}
+
+h2 {
+  color: red;
+  text-align: center;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+.spacer-left {
+  flex: 0.425 1 auto;
+}
+.spacer-mid {
+  flex: 0.25 1 auto;
+}
+.spacer-right {
+  flex: 1 1 auto;
+}

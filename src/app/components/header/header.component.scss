@@ -1,0 +1,32 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 14px;
+  font-size: 14px;
+
+  &::ng-deep .mat-button-wrapper {
+    line-height: 14px;
+    padding: 0;
+
+    .mat-icon {
+      font-size: 14px;
+      padding-right: 4px;
+      padding-top: 4px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  color: #343732;
+  font-size: 30px;
+}

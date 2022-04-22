@@ -1,0 +1,43 @@
+<h2>Temporizador</h2>
+<div>
+    <div>
+        <button (click)="startTimer()" mat-mini-fab color="accent" aria-label="Inicia el timer">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button (click)="pauseTimer()" mat-mini-fab color="accent" aria-label="Para el timer">
+            <mat-icon>pause</mat-icon>
+        </button>
+        <button (click)="restartTimer()" mat-mini-fab color="accent" aria-label="Reinicia el timer timer">
+            <mat-icon>restart_alt</mat-icon>
+        </button>
+    </div>
+    <div class="timer-container">
+        <div class="timer-container_buttons">
+            <button (click)="addValue('timer', 3600)" mat-mini-fab color="accent" aria-label="Suma 1 hora al timer">
+                <mat-icon>expand_less</mat-icon>
+            </button>
+            <button (click)="subValue('timer', 3600)" mat-mini-fab color="accent" aria-label="Resta 1 hora al timer">
+                <mat-icon>expand_more</mat-icon>
+            </button>
+        </div>
+        <p>{{ fogones[selected].timer * 1000 | date:'HH':'UTC'}}</p>
+        <div class="timer-container_buttons">
+            <button (click)="addValue('timer', 60)" mat-mini-fab color="accent" aria-label="Suma 1 minuto al timer">
+                <mat-icon>expand_less</mat-icon>
+            </button>
+            <button (click)="subValue('timer', 60)" mat-mini-fab color="accent" aria-label="Resta 1 minuto al timer">
+                <mat-icon>expand_more</mat-icon>
+            </button>
+        </div>
+        <p>{{ fogones[selected].timer * 1000 | date:'mm':'UTC'}}</p>
+        <div class="timer-container_buttons">
+            <button (click)="addValue('timer', 1)" mat-mini-fab color="accent" aria-label="Suma 1 segundo al timer">
+                <mat-icon>expand_less</mat-icon>
+            </button>
+            <button (click)="subValue('timer', 1)" mat-mini-fab color="accent" aria-label="Resta 1 segundo al timer">
+                <mat-icon>expand_more</mat-icon>
+            </button>
+        </div>
+        <p>{{ fogones[selected].timer * 1000 | date:'ss':'UTC'}}</p>
+    </div>
+</div>

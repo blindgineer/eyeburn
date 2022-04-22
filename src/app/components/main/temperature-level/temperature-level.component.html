@@ -1,0 +1,17 @@
+<h2>Nivel de Temperatura</h2>
+<div>
+    <div>
+        <button (click)="addValue('temperature', 1)" mat-mini-fab color="accent"
+            aria-label="Suma 1 al indicador de temperatura">
+            <mat-icon>add</mat-icon>
+        </button>
+        <button (click)="subValue('temperature', 1)" mat-mini-fab color="accent"
+            aria-label="Resta 1 al indicador de temperatura">
+            <mat-icon>remove</mat-icon>
+        </button>
+    </div>
+    <p>{{ fogones[selected].temperature }}</p>
+</div>
+<div *ngIf="fogones[selected].temperature > 0">
+    <h2>Inducción Activada</h2>
+</div>
