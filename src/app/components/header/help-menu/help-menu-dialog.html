@@ -1,8 +1,31 @@
 <h2 mat-dialog-title>Eyeburn</h2>
 <mat-dialog-content class="mat-typography">
     <h3>Guía de uso</h3>
-    <p>Aquí irán unas instrucciones acerca de como usar la aplicacion.
-    </p>
+    <ol>
+        <li seq="1">Menú de opciones</li>
+        <p>Al pulsar el icono del engranaje se extrae un desplegable que contiene un botón con el idioma y otro botón para
+            deshabilitar alertas.</p>
+        <li seq="2">Logotipo de la aplicación</li>
+        <p>Al pulsar el logotipo de la aplicación reproduce un audio.</p>
+        <li seq="3">Panel de fogones</li>
+        <p>Al pulsar encima de cualquiera de los cuatro fogones se muestra su identificador en el panel de controles.</p>
+        <li seq="4">Panel de controles</li>
+        <p>Se muestra el fogón seleccionado y los respectivos controles que alteran el estado del mismo, entre los cuales se
+        encuentran el botón de encendido/apagado, el temporizador, y el control de temperatura.</p>
+        <ol>
+            <li seq="4.1">Botón de encendido</li>
+            <p>Al pulsar sobre el botón de encendido cambia su color a verde, a la vez que se ilumina el fogón correspondiente. Al
+            volver a pulsar el botón, éste se vuleve de color rojo y se apaga la luz del fogón.</p>
+            <li seq="4.2">Temporizador</li>
+            <p>Con los tres botones de arriba, podemos iniciar el temporizador (botón de play), pausar el temporizador (botón de pause)
+            y resetear el temporizador (botón de reset).
+            Con las flechas de abajo, podemos aumentar y disminuir las horas, minutos y segundos del temporizador.</p>
+            <li seq="4.3">Nivel de temperatura</li>
+            <p>Pulsando los botones más (+) y menos (-), se aumenta o disminuye el valor de la temperatura. Si el valor estaba a 0 y se
+            aumenta, se encenderá el botón de encendido y se iluminará el fogón. Además, se añadirá un breve texto con el mensaje
+            “Inducción activada”.</p>
+        </ol>
+    </ol>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Close</button>

@@ -24,5 +24,6 @@ export class HelpMenuComponent {
 @Component({
   selector: 'help-menu-dialog',
   templateUrl: './help-menu-dialog.html',
+  styleUrls: ['help-menu.component.scss'],
 })
 export class HelpMenuDialogComponent {}
