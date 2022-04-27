@@ -40,6 +40,7 @@ export class TemporizadorComponent implements OnInit {
     let fogon = this.selected;
     this.fogones[fogon].interval = setInterval(() => {
       if (this.fogones[fogon].timer > 0) {
+        this.fogones[fogon].status = 1;
         this.fogones[fogon].timer--;
       } else {
         let audio = new Audio('assets/sounds/alert.mp3');
@@ -47,6 +48,7 @@ export class TemporizadorComponent implements OnInit {
         audio.onended = function () {
           alert('El temporizador del fogon ' + fogon + ' terminó.');
         };
+        this.fogones[fogon].status = 0;
         clearInterval(this.fogones[fogon].interval);
       }
     }, 1000);
