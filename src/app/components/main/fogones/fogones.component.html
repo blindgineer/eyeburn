@@ -2,7 +2,7 @@
     <mat-grid-tile *ngFor="let fogon of fogones;">
         <button class="ripple-container mat-elevation-z4" (click)="onClick(fogon.id)" mat-flat-button matRipple>
             <img [attr.src]="fogones[fogon.id].status === 1 ? 'assets/img/fogon1.svg' : 'assets/img/fogon0.svg'"
-                alt="Fogon {{fogon.id}} {{fogones[selected].status === 1 ? 'Encendido' : 'Apagado'}}" draggable="false">
+                alt="Fogon {{fogon.id}} {{fogones[fogon.id].status === 1 ? 'Encendido' : 'Apagado'}}" draggable="false">
         </button>
     </mat-grid-tile>
 </mat-grid-list>
