@@ -49,6 +49,7 @@ export class TemporizadorComponent implements OnInit {
           alert('El temporizador del fogon ' + fogon + ' terminó.');
         };
         this.fogones[fogon].status = 0;
+        this.fogones[fogon].temperature = 0;
         clearInterval(this.fogones[fogon].interval);
       }
     }, 1000);
